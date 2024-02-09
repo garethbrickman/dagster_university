@@ -58,11 +58,11 @@ def taxi_trips():
     conn.execute(sql_query)
 
 @asset(
-    deps=["taxi_trips_file"]
+    deps=["taxi_zones_file"]
 )
 def taxi_zones():
     """
-    Downloads NYC taxi zones dataset from DuckDB as CSV.
+    Creates a table called 'zones' in DuckDB from taxi_trips_file/
     """
     sql_query = f"""
         create or replace table zones as (
