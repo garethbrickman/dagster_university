@@ -27,7 +27,7 @@ def taxi_zones_file():
             f"https://data.cityofnewyork.us/api/views/755u-8jsi/rows.csv?accessType=DOWNLOAD"
         )
 
-    with open(constants.TAXI_TRIPS_TEMPLATE_FILE_PATH, "wb") as output_file:
+    with open(constants.TAXI_ZONES_FILE_PATH, "wb") as output_file:
         output_file.write(raw_taxi_zones.content)
 
 @asset(
