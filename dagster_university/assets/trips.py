@@ -35,7 +35,7 @@ def taxi_zones_file():
 )
 def taxi_trips():
     """
-      The raw taxi trips dataset, loaded into a DuckDB database
+      The raw taxi trips dataset, loaded into a DuckDB database.
     """
     sql_query = """
         create or replace table trips as (
@@ -62,7 +62,7 @@ def taxi_trips():
 )
 def taxi_zones():
     """
-    Creates a table called 'zones' in DuckDB from taxi_trips_file/
+    Creates a table called 'zones' in DuckDB from taxi_trips_file.
     """
     sql_query = f"""
         create or replace table zones as (
